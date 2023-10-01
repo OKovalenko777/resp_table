@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.check-icon,
+.btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  font-family: Arial, sens-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+}
+
+aside {
+  height: 100vh;
+  background-color: #ededed;
+}
+
+.container {
+  width: 100%;
+  padding: 42px;
+  margin-inline: auto;
+}
+
+/* table style */
+.table-wrap {
+  overflow: hidden;
+}
+
+.my-table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 16px;
+  width: 100%;
+  color: #2B2D3A;
+}
+.my-table th, .my-table td {
+  padding: 10px;
+  text-align: center;
+}
+.my-table thead th {
+  background-color: #f3f3f3;
+  padding: 12px 10px;
+  color: #7c7c7c;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.my-table thead th:first-child {
+  border-radius: 24px 0 0 24px;
+}
+.my-table thead th:last-child {
+  border-radius: 0 24px 24px 0;
+}
+.my-table tbody tr:nth-child(even) {
+  background-color: #fbfbfb;
+}
+.my-table tbody td {
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .my-table {
+    display: flex;
+    transition: all 0.2s ease;
+  }
+  .my-table thead {
+    display: block;
+    min-width: 200px;
+    box-shadow: 0 0 10px #999;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .my-table thead tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .my-table thead tr th {
+    text-align: left;
+    padding: 10px;
+  }
+  .my-table thead tr th:first-child {
+    border-radius: 24px 0 0 0;
+  }
+  .my-table thead tr th:last-child {
+    border-radius: 0 0 0 24px;
+    padding-bottom: 19px;
+    height: 51px;
+  }
+  .my-table tbody {
+    display: flex;
+    overflow-x: auto;
+  }
+  .my-table tbody::-webkit-scrollbar {
+    height: 7px;
+    border-radius: 4px;
+  }
+  .my-table tbody::-webkit-scrollbar-track {
+    background-color: #f3f3f3;
+  }
+  .my-table tbody::-webkit-scrollbar-thumb {
+    background-color: #adadad;
+    border-radius: 4px;
+  }
+  .my-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    transition: all 0.2s ease;
+  }
+  .my-table th, .my-table td {
+    height: 44px;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 42px 20px;
+  }
+
+  .my-table {
+    font-size: 14px;
+  }
+  .my-table thead {
+    min-width: 140px;
+  }
+  .my-table tbody tr {
+    min-width: 120px;
+  }
+}

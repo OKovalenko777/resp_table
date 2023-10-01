@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.check-icon,
+.btn img {
+  width: 24px;
+  height: 24px;
+}
+.btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+  background-color: transparent;
+}
+
+body {
+  font-family: Arial, sens-serif;
+}
+main {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+}
+aside {
+    height: 100vh;
+    background-color: #ededed;
+}
+.container {
+  width: 100%;
+  padding: 42px;
+  margin-inline: auto;
+}
+
+/* table style */
+.table-wrap {
+  overflow: hidden;
+}
+.my-table {
+  border: none;
+  border-collapse: collapse;
+  font-size: 16px;
+  width: 100%;
+  color: #2B2D3A;
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  thead {
+    th {
+      background-color: #f3f3f3;
+      padding: 12px 10px;
+      color: #7c7c7c;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      &:first-child {
+        border-radius: 24px 0 0 24px;
+      }
+      &:last-child {
+        border-radius: 0 24px 24px 0;
+      }
+    }
+  }
+  tbody {
+    tr:nth-child(even) {
+      background-color: #fbfbfb;
+    }
+    td {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 100%;
+  }
+  aside {
+    display: none;
+  }
+  .my-table {
+    display: flex;
+    transition: all .2s ease;
+    thead {
+      display: block;
+      min-width: 200px;
+      box-shadow: 0 0 10px #999;
+      position: relative;
+      transition: all .2s ease;
+      tr {
+        display: flex;
+        flex-direction: column;
+        th {
+          text-align: left;
+          padding: 10px;
+          &:first-child {
+            border-radius: 24px 0 0 0;
+          }
+          &:last-child {
+            border-radius: 0 0 0 24px;
+            padding-bottom: 19px;
+            height: 51px;
+          }
+        }
+      }
+    }
+    tbody {
+      display: flex;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 7px;
+        border-radius: 4px;
+      }
+      &::-webkit-scrollbar-track {
+          background-color: #f3f3f3;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #adadad;
+        border-radius: 4px;
+      }
+      tr {
+        display: flex;
+        flex-direction: column;
+        min-width: 200px;
+        transition: all .2s ease;
+      }
+    }
+    th, td {
+      height: 44px;
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 42px 20px;
+  }
+  .my-table {
+    font-size: 14px;
+    thead {
+      min-width: 140px;
+    }
+    tbody tr {
+      min-width: 120px;
+    }
+  }
+}
