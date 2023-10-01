@@ -135,6 +135,12 @@ aside {
     min-width: 200px;
     transition: all 0.2s ease;
   }
+  .my-table tbody tr td {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
   .my-table th, .my-table td {
     height: 44px;
     display: block;
